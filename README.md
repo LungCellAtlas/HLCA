@@ -20,14 +20,13 @@ If you would like to map your own data to the HLCA, for label transfer, identifi
 - [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
 - [Our HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for mapping with scArches using a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
 - [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a low-dimensional embedding). 
-CellTypist for label transfer: coming soon.<br>
-The mapping moreover gives you an HLCA-informed low-dimensional embedding that you can use for visualization (t-SNE, UMAP), clustering, and trajectory inference. 
-<br><br>
+- CellTypist for label transfer: coming soon.<br>
 
+The mapping moreover gives you an HLCA-informed low-dimensional embedding that you can use for visualization (t-SNE, UMAP), clustering, and trajectory inference.<br>
 Have fun!
 
 ### The HLCA paper:
-Sikkema et al., bioRxiv 2020: https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1
+Sikkema et al., bioRxiv 2022: https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1
 
 ### In case of issues:
 Please submit an issue to this GitHub repository.
