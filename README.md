@@ -8,7 +8,7 @@ Welcome to the github page of the intgrated Human Lung Cell Atlas (HLCA). Here, 
 If you're still wondering this, maybe check out the [paper](https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1). In brief, it is the first integrated, universal transcriptomic reference of the human lung on the single-cell level.
 
 ## Why do we need the HLCA?
-Over the past decade, numerous single-cell studies of the human lung have been published, yet each of these studies was limited in the number and diversity of individuals. However, a comprehensive reference should capture variation also across a diverse population. Moreover, querying individual studies simultaneously is complicated by different cell type definitions and batche effects. The HLCA overcomes these challenges by bringing together these single-cell and single-nucleus studies into a single atlas, combining samples from 444 individuals across 46 datasets. The core of this atlas, comprising healthy lung samples from 107 individuals, was fully re-annotated based on original annotations and annotations by 6 independent lung experts. This reannotation resulted in labeling of 58 different cell identity labels, thus proposing a first consensus annotation of the human lung.
+Over the past decade, numerous single-cell studies of the human lung have been published, yet each of these studies was limited in the number and diversity of individuals. However, a comprehensive reference should capture variation also across a diverse population. Moreover, querying individual studies simultaneously is complicated by different cell type definitions and batch effects. The HLCA overcomes these challenges by bringing together these single-cell and single-nucleus studies into a single atlas, combining samples from 444 individuals across 46 datasets. The core of this atlas, comprising healthy lung samples from 107 individuals, was fully re-annotated based on original annotations and annotations by 6 independent lung experts. This reannotation resulted in labeling of 58 different cell identity labels, thus proposing a first consensus annotation of the human lung.
 
 
 <img src="./figs/HLCA_annotations_umaps.png"><br>
@@ -30,11 +30,11 @@ If you would like to take a look at the HLCA, you can interactively explore it o
 If you would like to map your own data to the HLCA, for label transfer, identification of unknown and disease affected cell types there are multiple places to do that:<br>  
 - [The HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for bioinformaticians who want to map their data using scArches via a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
 - [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
-- [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a low-dimensional embedding). 
+- [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a UMAP visualization). 
 - CellTypist for label transfer: coming soon.
 - CZI reference mapping portal: coming soon.<br>
 
-The mapping moreover gives you an HLCA-informed low-dimensional embedding that you can use for visualization (t-SNE, UMAP), clustering, and trajectory inference.<br>
+Note that the scArches mapping gives you an HLCA-informed low-dimensional embedding that you can use for downstream analyses, such as visualization (t-SNE, UMAP), clustering, and trajectory inference.<br>
 Have fun!
 
 ### The HLCA paper:
