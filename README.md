@@ -1,8 +1,6 @@
 ## [The integrated Human Lung Cell Atlas](https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1)
 
-Welcome to the github page of the intgrated Human Lung Cell Atlas (HLCA). Here, you will find:
-* scripts to reproduce the analysis
-* links to all places you can find, download, explore, and use the HLCA
+Welcome to the github page of the intgrated Human Lung Cell Atlas (HLCA). Here, you will find some explanations about the HLCA, and links to all places you can find, download, explore, and use the HLCA
 
 ## What is the HLCA?
 If you're still wondering this, maybe check out the [paper](https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1). In brief, it is the first integrated, universal transcriptomic reference of the human lung on the single-cell level.
@@ -26,7 +24,9 @@ If you would like to take a look at the HLCA, you can interactively explore it o
 - [cellxgene](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) for exploration and download of the HLCA core.<br> 
 - [FASTGenomics](https://beta.fastgenomics.org/p/hlca) for exploration and download of both the HLCA core and the low-dimensional embedding + metadata of the extended HLCA.<br>
 
-The file [HLCA_metadata_explanation.csv](./docs/HLCA_metadata_explanation.csv) in the docs folder of this repo contains a description of each metadata category that you'll find in the HLCA.<br>
+The file [HLCA_metadata_explanation.csv](./docs/HLCA_metadata_explanation.csv) in the docs folder of this repo contains a description of each metadata category that you'll find in the HLCA.<br><br>
+Finally, if you're interested in the code we used for the HLCA project, go check out the [HLCA reproducibility GitHub](https://github.com/LungCellAtlas/HLCA_reproducibility) containing all scripts and notebooks used for the HLCA project.<br>
+
 ## Map your own data to the HLCA:
 If you would like to map your own data to the HLCA, for label transfer, identification of unknown and disease affected cell types there are multiple places to do that:<br>  
 - [The HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for bioinformaticians who want to map their data using scArches via a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
