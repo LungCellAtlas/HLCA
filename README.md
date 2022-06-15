@@ -24,7 +24,7 @@ The unprecedented number and diversity of human lung samples and cell types can 
 ## How to use, explore and download the HLCA
 If you would like to take a look at the HLCA, you can interactively explore it on two platforms. You can also download the HLCA there for your own use:<br> 
 - [cellxgene](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) for exploration and download of the HLCA core.<br> 
-- [FASTGenomics](https://beta.fastgenomics.org/p/hlca)  for exploration and download of both the HLCA core and the full, extended HLCA.<br>
+- [FASTGenomics](https://beta.fastgenomics.org/p/hlca) for exploration and download of both the HLCA core and the low-dimensional embedding + metadata of the extended HLCA.<br>
 
 The file [HLCA_metadata_explanation.csv](./docs/HLCA_metadata_explanation.csv) in the docs folder of this repo contains a description of each metadata category that you'll find in the HLCA.<br>
 ## Map your own data to the HLCA:
@@ -32,7 +32,7 @@ If you would like to map your own data to the HLCA, for label transfer, identifi
 - [The HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for bioinformaticians who want to map their data using scArches via a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
 - [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
 - [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a UMAP visualization). 
-- CellTypist for label transfer: coming soon.
+- [CellTypist for label transfer](https://t.co/stkbmLeSId) ("Human_Lung_Atlas" reference)
 - CZI reference mapping portal: coming soon.<br>
 
 Note that the scArches mapping gives you an HLCA-informed low-dimensional embedding that you can use for downstream analyses, such as visualization (t-SNE, UMAP), clustering, and trajectory inference.<br>
