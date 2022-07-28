@@ -30,7 +30,7 @@ Finally, if you're interested in the code we used for the HLCA project, go check
 ## Map your own data to the HLCA:
 If you would like to map your own data to the HLCA, for label transfer, identification of unknown and disease affected cell types there are multiple places to do that:<br>  
 - [The HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for bioinformaticians who want to map their data using scArches via a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
-- [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
+- [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding), see also [here](docs/fastgenomics-hlca-mapping.gif) for a short video demonstrating how to map your data.<br>
 - [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a UMAP visualization). 
 - [CellTypist for label transfer](https://t.co/stkbmLeSId) ("Human_Lung_Atlas" reference)
 - CZI reference mapping portal: coming soon.<br>
