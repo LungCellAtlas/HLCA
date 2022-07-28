@@ -21,8 +21,8 @@ The unprecedented number and diversity of human lung samples and cell types can 
 <br>
 ## How to use, explore and download the HLCA
 If you would like to take a look at the HLCA, you can interactively explore it on two platforms. You can also download the HLCA there for your own use:<br> 
-- [cellxgene](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) for exploration and download of the HLCA core.<br> 
-- [FASTGenomics](https://beta.fastgenomics.org/p/hlca) for exploration and download of both the HLCA core (including the full raw + normalized gene matrix) and the extended HLCA (including raw counts for 2000 genes).<br>
+- [cellxgene](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) for exploration and download of the HLCA core, including both raw and normalized counts, as well as a batch-corrected embedding and UMAP visualization.<br> 
+- [FASTGenomics](https://beta.fastgenomics.org/p/hlca) for exploration of the extended HLCA (including raw, i.e. un-normalized (!) counts for 2000 genes).<br>
 
 The file [HLCA_metadata_explanation.csv](./docs/HLCA_metadata_explanation.csv) in the docs folder of this repo contains a description of each metadata category that you'll find in the HLCA.<br><br>
 Finally, if you're interested in the code we used for the HLCA project, go check out the [HLCA reproducibility GitHub](https://github.com/LungCellAtlas/HLCA_reproducibility) containing all scripts and notebooks used for the HLCA project.<br>
