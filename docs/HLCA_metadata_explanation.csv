@@ -1,44 +1,73 @@
-Metadata category:,Explanation:
-3'_or_5',Whether 3' or 5' sequencing was performed.
-age,"Age of subject. Wherever an age range was provided, the mean of the range is shown."
-anatomical_region_ccf_score,"Anatomical location from which the sample was taken, encoded into a 1-dimension common coordinate framework (ccf) score. 0 represents the most proximal location (nose, inferior turbinate), whereas 1 represents the most distal location (parenchyma). For more information, see HLCA paper."
-anatomical_region_level_[1-3],"Anatomical location from which the sample was taken, broken down into levels (1 coarsest, 3 finest). Wherever finer region of sample was not known, the coarser level is specified, with a prefix of the level (e.g. when level 2 not known, ""Parenchyma"" from level 1 is forward-propagated as ""1_Parenchyma) in level 2)."
-anatomical_region_highest_res,"Highest level at which ""anatomical_region_level_[1-3]"" is known."
-ann_coarse_for_GWAS_and_modeling,"Final annotations by the HLCA expert team, at the level that was used for GWAS and covariate modeling analysis (see paper for more info). These are often not the finest levels of annotation available."
-ann_finest_level,"Final annotations by the HLCA expert team, shown at the finest level of detail available for every cell."
-ann_highest_res,"Matching level number for ""ann_finest_level"""
-ann_level_[1-5],"Final annotations by the HLCA expert team, broken down into levels (1 coarsest, 5 finest). Where annotations do not go up to level 5, levels without annotations are set to None. "
-BMI,"BMI of the subject, when available"
-cell_ranger_version,CellRanger version used to process sequencing data. 
-condition,"Lung condition of donor. Note that for cancer patients, non-tumorous tissue was used for the samples in the HLCA core. Cells set to ""nan"" come from donors without lung condition."
-dataset,"Dataset. This was the variable used for the integration of datasets. Often corresponds to ""study"", although some studies were split into multiple datasets, e.g. based on sequencing platform. See the HLCA paper for more information on dataset definition."
-entropy_[cat]_leiden_3,"Entropy of category (e.g. subject_ID, dataset) among cells, at level 3 leiden clusters. This score quantifies the diversity in terms of a category among the cells of a cluster."
-ethnicity,Ethnicity of subject from which sample was taken.
-fresh_or_frozen,Whether cells come from a fresh or frozen sample.
-last_author_PI,"Last author(s) of study, or PI(s) leading the project for unpublished datasets."
-leiden_[1-5],"Clustering, broken down into levels (1 coarsest, 5 finest). Nested clustering was performed, with parent clusters specified in cluster names."
-log10_total_counts,Log10 of total number of UMIs detected in the cell.
-mito_frac,Fraction of counts (UMIs) from mitochondrial RNA. 
-mixed_ethnicity,Ethnicities of subject if ethnicity did not fit into a single category.
-n_genes,Number of genes with at least 1 count in the cell.
-original_ann_level_[1-5],"Original cell type labels, as provided by datasets generators broken down into levels (1 coarsest, 5 finest). To resolve differences in nomenclature and level of annotation detail, these annotations are harmonized based on a mapping of provided labels to a hierarchical common label reference. Where annotations do not go up to level 5, levels without annotations are set to None. Note that a full re-annotation was performed after integration by a HLCA expert team. These annotations can be found under ""ann_level_[1-5]""."
-reannotation_type,"Comparison of ""original_ann_level_[1-5]"" to ""ann_level_[1-5]"". If original and final annotations are contradictory, cells are labeled as ""misannotated"", or ""underannotated, incorrect"". Where original labels were correct, but less detailed than final annotations, cells are labeled as ""underannotated, correct"". Where annotations match both in label and level of annotation, cells are labeled as ""correctly annotated"". "
-ribo_frac,Fraction of counts (UMIs) from ribosomal RNA. 
-sample,Sample from wich cells came.
-sample_type,"Type of sample (e.g. brush, biopsy, surgical resection)."
-scanvi_label,"Cell type labels that were used for the integration of datasets. Correspond to level 1, 2 or 3 of ""original_ann_level_[1-5]""."
-sequencing_platform,Platform used for sequencing.
-sex,Sex of subject from which cells came.
-single_cell_platform,Single cell platform used.
-size_factors,Normalization factors used to normalize raw count data.
-smoking_status,"Smoking status of subject (grouped into ""ever"", ""former"" or ""never"" smoker)."
-study,"Original study from which data came, named by last author(s)/PIs and year of publication/dataset generation."
-study_long,"Same as study, but now named as [institute]_[last_author(s)/PI(s)]_[year_of_publication/data_generation]_[first_author/unpublished]"
-subject_ID,ID of subject/donor from which sample was taken.
-subject_type,"Type of subject from which sample was taken, i.e. whether they were an organ donor, alive, and healthy or diseased."
-Standardized metadata categories (only on cellxgene version of HLCA):,
-assay,Same as single_cell_platform
-cell_type,"Cell type annotation, harmonized with Uberon cell ontology. This often contains coarser annotations than our actual annotations, so not recommended to use unless you need cell ontology annotations."
-developmental stage,Same as age
-ethnicity,"Same as ethnicity above, but mapped to standardized human ancestry ontology (""hancestro"")"
-tissue,"Same as anatomical_region_level_1, but mapped to Uberon tissue ontology"
+﻿variable type,variable name,HLCA core,HLCA full,explanation,,,,,
+,,,,,,,,,
+"1. obs variables, ontology based:",,,,,,,,,
+,assay,x,x,Single cell assay used,,,,,
+,cell_type,x,x,"Cell type; harmonized based on Cell Ontology (CL). Note that more detailed (non-ontology-based) cell type names are available under ""ann_finest_level"", and hierarchical annotations can be found ""ann_level_[1-5]"" ",,,,,
+,development_stage,x,x,"Age, harmonized/encoded based on HsapDv ontology. Slightly higher resolution, non-ontology-based ages are available under ""age_or_mean_of_age_range""",,,,,
+,disease,x,x,"Disease, harmonized based on Mondo ontology. Slighly higher resolution, non-ontology-based disease categories can be found under lung_condition",,,,,
+,donor_id,x,x,"Donor-id, formatted as ""homosapiens_None_2023_None_sikkemalisa_001_d10_1101_2022_03_10_483747[DONORID]"" for the core, and  ""homosapiens_None_2023_None_sikkemalisa_002_d10_1101_2022_03_10_483747[DONORID]"" for the full HLCA",,,,,
+,is_primary_data,x,x,Indicates if the cells are part of an earlier dataset on cellxgene,,,,,
+,self_reported_ethnicity,x,x,"Ethnicity, harmonized based on HANCESTRO ontology",,,,,
+,sex,x,x,"Sex, self-reported or as reported by physician",,,,,
+,suspension_type,x,x,Whether cells or nuclei were used for sequencing,,,,,
+,tissue,x,x,"Anatomical region sequenced, harmonized based on UBERON/CL",,,,,
+,,,,,,,,,
+"2. obs variables, categorical",,,,,,,,,
+,3'_or_5',x,x,Whether 3' or 5' sequencing was performed,,,,,
+,age_range,x,x,Age range for donor for which no specific age was given but only a range,,,,,
+,ann_coarse_for_GWAS_and_modeling,x,x,"For cells from the HLCA core: Final annotations by the HLCA expert team, at the level that was used for GWAS and covariate modeling analysis (see paper for more info). These are often not the finest levels of annotation available.",,,,,
+,ann_finest_level,x,x,"For cells from the HLCA core: Final annotations by the HLCA expert team, shown at the finest level of detail available for every cell. For cells not in the core (i.e. added during HLCA extesnion, only present in the full HLCA): finest labels as transferred from the core to the extension by label transfer. Cell labels with a label transfer uncertainty higher than 0.2 are set to unknown.",,,,,
+,ann_level_[1-5],x,x,"For cells from the HLCA core: Final annotations by the HLCA expert team, broken down into levels (1 coarsest, 5 finest). Where annotations do not go up to level 5, levels without annotations are set to None. For cells not in the core (i.e. added during HLCA extesnion, only present in the full HLCA): labels of the given annotation level as transferred from the core to the extension by label transfer. Cell labels with a label transfer uncertainty higher than 0.2 are set to unknown.",,,,,
+,cause_of_death,x,x,Cause of death,,,,,
+,core_or_extension,,x,"Whether a given cell is also present in the HLCA core, or only in the full HLCA (""extension"")",,,,,
+,dataset,x,x,"Dataset. This was the variable used for batch correction and data integration. Often corresponds to ""study"", although some studies were split into multiple datasets, e.g. based on sequencing platform. See the HLCA paper for more information on dataset definition.",,,,,
+,fresh_or_frozen,x,x,Whether cells come from a fresh or frozen sample.,,,,,
+,lung_condition,x,x,Lung condition of donor. ,,,,,
+,mixed_ancestry,x,x,Specification of ethnicity/ancestry where a donor was reported as being of mixed ethnicity/ancestry.,,,,,
+,original_ann_level_[1-5],x,x,"Original cell type labels, as provided by datasets generators broken down into levels (1 coarsest, 5 finest). To resolve differences in nomenclature and level of annotation detail, these annotations are harmonized based on a mapping of provided labels to a hierarchical common label reference. Where annotations do not go up to level 5, levels without annotations are set to None. Note that a full re-annotation was performed after integration by a HLCA expert team. These annotations can be found under ""ann_level_[1-5]"".",,,,,
+,original_ann_nonharmonized,x,x,Original cell type labels before any harmonizing of labels was done.,,,,,
+,reannotation_type,x,x,"For cells from the HLCA core: Comparison of ""original_ann_level_[1-5]"" to ""ann_level_[1-5]"". If original and final annotations are contradictory, cells are labeled as ""Misannotated"". Where original labels were correct, but less detailed than final annotations, cells are labeled as ""Underannotated"". Where annotations match both in label and level of annotation, cells are labeled as ""Correctly annotated"".",,,,,
+,sample,x,x,Single cell sample ,,,,,
+,scanvi_label,x,x,"For the HLCA core: cell type label (from ""original_ann_level_[1-5]"") as used for integration with scANVI",,,,,
+,sequencing_platform,x,x,Sequencing platform,,,,,
+,smoking_status,x,x,Smoking status ,,,,,
+,study,x,x,Study,,,,,
+,subject_type,x,x,"Status of donor when sample was taken; subdivided into ""alive_healthy"", ""alive_disease"" and ""organ_donor"". More details can be inferred from ""tissue_sampling_method"".",,,,,
+,tissue_coarse_unharmonized,,x,"Anatomical location of sample (coarse), as labeled in original datasets. For harmonized anatomical location information, see ""tissue_level_[1-3]"".",,,,,
+,tissue_detailed_unharmonized,,x,"Anatomical location of sample (detailed), as labeled in original datasets. For harmonized anatomical location information, see ""tissue_level_[1-3]"".",,,,,
+,tissue_dissociation_protocol,x,x,Protocol used for tissue dissociation into single cells,,,,,
+,tissue_level_[2-3],x,x,"Anatomical location of sample in more detail where available. For coarsest level, see ontology-based variable ""tissue"".",,,,,
+,tissue_sampling_method,x,x,"Method by which a sample was obtained, e.g. ""biopsy"" or ""autopsy"".",,,,,
+,transf_ann_level_[1-5]_label,,x,"For cellx only in the full HLCA (i.e. cells in the HLCA extension), and not in the core: label as transferred from the HLCA core, from coarsest (1) to finest (5) where available. Note that these different levels could contradict each other, given the label transfer algorithm. Furthermore, note that even labels transfered with a high uncertainty are retained here. See ""ann_level_[1-5]"" for filtered transfered labels, where labels with an uncertainty >0.2 are set to unknown.",,,,,
+,,,,,,,,,
+"3. obs variables, continuous:",,,,,,,,,
+,age_or_mean_of_age_range,x,x,"Donor age, or mean of age range where only a range was given. Original age ranges can be found under ""age_range"".",,,,,
+,anatomical_region_ccf_score,x,x,"Anatomical region as encoded in a continuous ""common coordinate framework"" score, with lowest (0) corresponding to most proximal (nose) and highest (1) corresponding to most distal (lung parenchyma). See paper for futher details on encoding.",,,,,
+,BMI,x,x,BMI of donor.,,,,,
+,entropy_[category]_leiden_3,x,,"Entropy of category (e.g. subject_ID, dataset) among cells, at level 3 leiden clusters. This score quantifies the diversity in terms of a category among the cells of a cluster.",,,,,
+,leiden_[1-5],x,,"HLCA core clustering, broken down into levels (1 coarsest, 5 finest). Nested clustering was performed, with parent clusters specified in cluster names.",,,,,
+,log10_total_counts,x,x,Logartihm (base 10) of total UMI counts per cell.,,,,,
+,n_genes_detected,x,,Number of genes detected per cell.,,,,,
+,original_ann_highest_res,x,,Highest resolution at which original cell type labels were available for a given cell.,,,,,
+,reference_genome,x,,Reference genome used for read alignment.,,,,,
+,size_factors,x,,SCRAN normalization factors used to normalize counts in the HLCA core,,,,,
+,total_counts,x,x,Total UMI counts per cell.,,,,,
+,transf_ann_level_[1-5]_uncert,,x,"Uncertainty of label transfer at a given annotation level, for cells only present in the full HLCA (=HLCA extension)",,,,,
+,,,,,,,,,
+4. layers,,,,,,,,,
+,adata.X,x,x,"For HLCA core: SCRAN-normalized, log-transformed counts. For full HLCA: total-counts normalized, log-transformed counts. Raw counts were normalized for all datasets, except for Meyer_2021, for which  soupX'ed counts were normalized (see layer 'soupX').",,,,,
+,adata.raw.X,x,x,Raw counts,,,,,
+,adata.layers['soupX'],,x,"Counts corrected for ambient RNA using soupX. Corrected counts were only used for the Meyer_2021 dataset, all other studies are set to 0 in this layer.",,,,,
+,,,,,,,,,
+5. var variables,,,,,,,,,
+,feature_is_filtered,x,x,"CELLxGENE variable, False for all cells",,,,,
+,original_gene_symbols,,x,"For the full HLCA, gene name harmonization was done to set all datasets to the same genome annotation version where possible (ensembl 107)",,,,,
+,,,,,,,,,
+6. obsm matrices,,,,,,,,,
+,X_scanvi_emb,x,x,HLCA core: scANVI-based integarted and batch-corrected embedding. Cells present only in the full HLCA (=HLCA extension) were mapped in the same embedding space using scArches.,,,,,
+,X_umap,x,x,"UMAP embedding of the cells, based on X_scanvi_emb.",,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
