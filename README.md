@@ -24,15 +24,13 @@ The unprecedented number and diversity of human lung samples and cell types in t
 If you would like to take a look at the HLCA, you can interactively explore it on CELLxGENE. There you can also download the HLCA for your own use:<br> 
 - [cellxgene](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) for exploration and download of the HLCA core and the full HLCA, including both raw and normalized counts, as well as a batch-corrected embedding and UMAP visualization.<br> 
 
-For downloading the HLCA scANVI batch correction/integration model, checkout Zenodo [TO DO once updated to v1.1].<br>
-
 The file [HLCA_metadata_explanation.csv](./docs/HLCA_metadata_explanation.csv) in the docs folder of this repo contains a description of each metadata category that you'll find in the HLCA.<br><br>
-Finally, if you're interested in the code we used for the HLCA project, go check out the [HLCA reproducibility GitHub](https://github.com/LungCellAtlas/HLCA_reproducibility) containing all scripts and notebooks used for the HLCA project.<br>
-
+If you're interested in the code we used for the HLCA project, go check out the [HLCA reproducibility GitHub](https://github.com/LungCellAtlas/HLCA_reproducibility) containing all scripts and notebooks used for the HLCA project.<br><br>
+If you would like to map your own data to the HLCA, see the section below. 
 ## Map your own data to the HLCA:
 If you would like to map your own data to the HLCA, for label transfer, identification of unknown and disease affected cell types there are multiple places to do that:<br>  
 - [The HLCA mapping GitHub repository](https://github.com/LungCellAtlas/mapping_data_to_the_HLCA) for bioinformaticians who want to map their data using scArches via a jupyter notebook  (including label transfer, uncertainty scores, and a low-dimensional embedding).<br>
-- [The HLCA scANVI-based reference model](https://cellxgene.cziscience.com/collections/6f6d381a-7701-4781-935c-db10d30de293) on Zenodo<br>
+- [The HLCA scANVI-based reference model](https://zenodo.org/record/7599104#.ZF5kPS8Rpqs) on Zenodo<br>
 - [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches) for automated mapping with [scArches](https://www.nature.com/articles/s41587-021-01001-7) (including label transfer, uncertainty scores, and a low-dimensional embedding), see also [here](docs/fastgenomics-hlca-mapping.gif) for a short video demonstrating how to map your data. [to be updated to version 1.1!]<br>
 - [Azimuth](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a UMAP visualization). [to be updated to version 1.1!]<br>
 - [CellTypist for label transfer](https://t.co/stkbmLeSId) ("Human_Lung_Atlas" reference). [to be updated to version 1.1!]
