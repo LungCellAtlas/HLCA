@@ -41,7 +41,7 @@ For CellTypist-based label transfer (not used in the paper):
 Have fun!
 
 ### The HLCA paper:
-[Sikkema et al.](https://www.nature.com/articles/s41591-023-02327-2), Nature Medicine 2023: 
+[Sikkema et al.](https://www.nature.com/articles/s41591-023-02327-2), Nature Medicine 2023
 
 ### Any questions?
 Please submit an issue to this GitHub repository.
