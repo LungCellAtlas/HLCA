@@ -1,9 +1,9 @@
-## [The Human Lung Cell Atlas](https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1)
+## [The Human Lung Cell Atlas](https://www.nature.com/articles/s41591-023-02327-2)
 
 Welcome to the github page of the Human Lung Cell Atlas (HLCA). Here, you will find explanation about the HLCA, and links to all places you can find, download, explore, and use the HLCA
 
 ## What is the HLCA?
-If you're still wondering this, maybe check out the [paper](https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1). In brief, it is the first integrated, universal transcriptomic reference of the human lung at the single-cell level.
+If you're still wondering this, maybe check out the [paper](https://www.nature.com/articles/s41591-023-02327-2). In brief, it is the first integrated, universal transcriptomic reference of the human lung at the single-cell level.
 
 ## Why do we need the HLCA?
 Over the past decade, numerous single-cell studies of the human lung have been published, yet each of these studies was limited in the number and diversity of individuals, and are biased by their specific choice in technologies, protocols and more. A comprehensive reference should capture variation across a diverse population. Moreover, querying individual studies simultaneously is complicated by different cell type definitions. The HLCA overcomes these challenges by bringing together single-cell and single-nucleus studies into a single atlas, combining samples from 486 individuals across 49 datasets. The core of this atlas, comprising healthy lung samples from 107 individuals, was fully re-annotated based on original annotations and annotations by 6 independent lung experts. This reannotation resulted in labeling of 61 different cell identity labels, thus proposing a first consensus annotation of the human lung.
@@ -30,9 +30,8 @@ If you would like to map your own data to the HLCA, see the section below.
 ## Map your own data to the HLCA and/or perform HLCA-based label transfer:
 If you would like to map your own data to the HLCA to obtain an atlas-based low-dimensional embedding (compatible with the atlas), and for label transfer and identification of unknown and disease affected cell types there are multiple places to do that:<br>  
 - [The Jupyter notebook tutorial](https://github.com/theislab/scarches/blob/hlca_tutorial_improvements/notebooks/hlca_map_classify.ipynb) of [scArches](https://www.nature.com/articles/s41587-021-01001-7) for mapping data to the HLCA (including label transfer and an atlas-based low-dimensional embedding). This approach was used and verified in the paper.<br>
-- [FASTGenomics](link to follow once updated to HLCA v1.1). Same as above, but **automated** mapping via a web browser, see also [here](docs/fastgenomics-hlca-mapping.gif) for a short video demonstrating how to map your data.<br>
-- [Azimuth, older HLCA version, to be updated](https://app.azimuth.hubmapconsortium.org/app/human-lung-v2) for automated mapping with Azimuth (including label transfer and a UMAP visualization). This approach was not used in the paper.<br>
-- CZI reference mapping portal: coming soon.<br>
+- [FASTGenomics](https://beta.fastgenomics.org/analyses/detail-analysis-d85cb82af90d42bd9bc3086c1dc035c1#Result&scArches). Same as above, but **automated** mapping via a web browser, see also [here](docs/fastgenomics-hlca-mapping.gif) for a short video demonstrating how to map your data.<br>
+- [Azimuth](https://azimuth.hubmapconsortium.org/references/#Human%20-%20Lung%20v2%20%28HLCA%29) for automated mapping with Azimuth, including label transfer and a UMAP visualization. (Note that this approach was not used in the paper).<br>
 
 [The HLCA scANVI-based reference model](https://zenodo.org/record/7599104#.ZF5kPS8Rpqs) can be found on Zenodo<br>
 
@@ -42,7 +41,7 @@ For CellTypist-based label transfer (not used in the paper):
 Have fun!
 
 ### The HLCA paper:
-Sikkema et al., bioRxiv 2022: https://www.biorxiv.org/content/10.1101/2022.03.10.483747v1
+[Sikkema et al.](https://www.nature.com/articles/s41591-023-02327-2), Nature Medicine 2023: 
 
 ### Any questions?
 Please submit an issue to this GitHub repository.
